@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic situation prediction</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div id="container">
+    <form method="POST" action="/">
+        <label for="time">Time:</label>
+        <input type="number" id="time" name="time"><br><br>
+        <label for="carcount">Car Count:</label>
+        <input type="number" id="carcount" name="carcount"><br><br>
+        <label for="bikecount">Bike Count:</label>
+        <input type="number" id="bikecount" name="bikecount"><br><br>
+        <label for="buscount">Bus Count:</label>
+        <input type="number" id="buscount" name="buscount"><br><br>
+        <label for="truckcount">Truck Count:</label>
+        <input type="number" id="truckcount" name="truckcount"><br><br>
+        <label for="total">Total:</label>
+        <input type="number" id="total" name="total"><br><br>
+        <button>Predict</button>
+    </form>
+    <div id="answer">
+        <h1>Prediction:</h1>
+        <p>{{data}}</p>
+    </div>
+</div>
+</body>
+</html>
