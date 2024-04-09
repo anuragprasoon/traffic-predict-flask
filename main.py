@@ -18,8 +18,9 @@ def home():
             truck= int(request.form['truckcount'])
             total= int(request.form['total'])
 
-            #y_pred=Stacking_predict.predict()
+            #y_pred=Stacking_predict.predict(time,car,bike,bus,truck,total)
             d={"0":"Low","1":"Normal","2":"High","3":"Heavy"}
+            #return render_template("index.html", data=d[str(y_pred)])
             return render_template("index.html", data=d[str(3)])
     return render_template("index.html",data="Data will be displayed here")
 
